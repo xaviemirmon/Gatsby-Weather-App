@@ -9,9 +9,10 @@ const Header = ({ siteTitle }) => {
   const [city, setCity] = useState(null)
   const [country, setCountry] = useState(null)
   const [status, setStatus] = useState(false)
+  const isBrowser = typeof window !== 'undefined'
 
   useEffect(() => {
-    if (navigator.geolocation) {
+    if (isBrowser && navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(position => {
         fetch(`https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${position.coords.latitude}9&longitude=${position.coords.longitude}&localityLanguage=en`)
           .then(
