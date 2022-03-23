@@ -1,12 +1,3 @@
-exports.createPages = async ({ actions }) => {
-  const { createPage } = actions
-  createPage({
-    path: "/using-dsg",
-    component: require.resolve("./src/templates/using-dsg.js"),
-    context: {},
-    defer: true,
-  })
-}
 
 exports.createPages = async ({ actions, graphql }) => {
   const countries = ["US", "GB"]
@@ -38,6 +29,7 @@ exports.createPages = async ({ actions, graphql }) => {
             city: page,
             unit: unit,
           },
+          defer: true,
         })
       })
     })
