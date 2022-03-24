@@ -29,7 +29,7 @@ const Header = ({ siteTitle }) => {
 
       })
     }
-  }, [navigator.geolocation])
+  }, [isBrowser && navigator.geolocation])
 
   return (
     <header

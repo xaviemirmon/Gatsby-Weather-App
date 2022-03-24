@@ -1,23 +1,24 @@
 
 exports.createPages = async ({ actions, graphql }) => {
-  const countries = ["US", "GB"]
   const units = ["metric", "imperial"]
 
-  await countries.forEach( async country => {
-    const result = await graphql(`
+  const result = await graphql(`
     {
       site {
         siteMetadata {
           cities {
-            ${country}
+            US
+            GB
           }
         }
       }
     }
   `)
 
-    const pages = await result.data.site.siteMetadata.cities[country]
+  const countries = await result.data.site.siteMetadata.cities
 
+  Object.entries(countries).forEach( entry => {
+    const [country, pages ] = entry
     pages.forEach(page => {
       units.forEach( unit => {
         const convertUnit = unit === 'metric' ? 'c' : 'f'
@@ -34,6 +35,5 @@ exports.createPages = async ({ actions, graphql }) => {
       })
     })
   })
-
 
 }
