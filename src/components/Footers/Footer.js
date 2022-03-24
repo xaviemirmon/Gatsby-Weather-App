@@ -22,12 +22,12 @@ const Footer = ({imageData}) => (
         <Box>
           © {new Date().getFullYear()}, Built with ♥️ by
           {` `}
-          <Link href="https://github.com/xaviemirmon/" target="_blank">@xaviemirmon</Link> using
+          <Link href="https://github.com/xaviemirmon/" target="_blank" rel="noopener">@xaviemirmon</Link> using
           {` `}
-          <Link href="https://www.gatsbyjs.com">Gatsby</Link>
+          <Link href="https://www.gatsbyjs.com" target="_blank" rel="noopener">Gatsby</Link>
         </Box>
         <Box>
-          {imageData && <Link href={imageData.links.html} target="_blank">{imageData.description ? (imageData.description.length > 40 ? imageData.description.substring(0,40) + '...' : imageData.description) : imageData.alt_description?.charAt(0).toUpperCase() + imageData.alt_description?.substr(1).toLowerCase()} by {imageData?.user?.name}</Link>}
+          {imageData && <Link href={imageData.links.html} target="_blank" rel="noopener">{imageData.description ? (imageData.description.length > 40 ? imageData.description.substring(0,40) + '...' : imageData.description) : imageData.alt_description?.charAt(0).toUpperCase() + imageData.alt_description?.substr(1).toLowerCase()} by {imageData?.user?.name}</Link>}
         </Box>
       </Box>
     </MenuBackground>
