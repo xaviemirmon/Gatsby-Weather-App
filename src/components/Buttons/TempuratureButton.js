@@ -24,7 +24,7 @@ const TempuratureButton = ({metric}) => {
     const temp = localStorage.getItem("defaultTempMetric") ? localStorage.getItem("defaultTempMetric") : 'c'
     setLabel(metric === 'c' ? '℃': '℉')
     setVariant(metric === temp ? 'primary' : 'link')
-  }, [])
+  })
 
   return (
     <Button variant={variant} onClick={event => {

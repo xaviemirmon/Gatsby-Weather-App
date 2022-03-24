@@ -1,5 +1,6 @@
 import { Grid, Heading } from "theme-ui"
 import { Link } from "gatsby"
+import { ResponsiveTextAlignedBox } from "../Blocks/Boxes"
 
 const CountryLinkList = ({countryCode, numberPerCountry, temp, countryData, query }) =>{
 
@@ -7,7 +8,7 @@ const CountryLinkList = ({countryCode, numberPerCountry, temp, countryData, quer
     filter_data.toLowerCase().includes(query.toLowerCase())
   )
   return(
-    <>
+    <ResponsiveTextAlignedBox align='left'>
       <Heading as='h2' sx={{
         py: 4
       }}>
@@ -28,7 +29,7 @@ const CountryLinkList = ({countryCode, numberPerCountry, temp, countryData, quer
           )
         )}
       </Grid>
-    </>
+    </ResponsiveTextAlignedBox>
   )
 }
 

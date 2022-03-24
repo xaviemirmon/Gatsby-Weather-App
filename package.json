@@ -7,7 +7,6 @@
   "dependencies": {
     "@emotion/react": "^11.8.2",
     "@mdx-js/react": "v1",
-    "@theme-ui/color": "^0.14.1",
     "@theme-ui/presets": "^0.14.0",
     "degrees-to-direction": "^1.1.1",
     "gatsby": "^4.10.0",
@@ -21,6 +20,7 @@
     "gatsby-source-filesystem": "^4.10.0",
     "gatsby-source-graphql": "^4.10.0",
     "gatsby-transformer-sharp": "^4.10.0",
+    "polished": "^4.1.4",
     "prop-types": "^15.8.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",

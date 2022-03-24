@@ -1,4 +1,4 @@
-import { Box, Grid, Heading, Paragraph } from "theme-ui"
+import { Grid, Heading, Paragraph } from "theme-ui"
 import d2d from "degrees-to-direction"
 import { GlassOverlayBackground } from "../Backgrounds/Backgrounds"
 import { ResponsiveTextAlignedBox } from "./Boxes"
