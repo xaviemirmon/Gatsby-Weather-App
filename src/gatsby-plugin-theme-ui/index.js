@@ -22,6 +22,14 @@ const theme = {
       fontFamily: `inherit`
     },
   },
+  forms: {
+    ...baseTheme.forms,
+    input: {
+      "&::placeholder": {
+        color: `white`
+      }
+    }
+  },
   text: {
     ...baseTheme.text,
     centered: {
