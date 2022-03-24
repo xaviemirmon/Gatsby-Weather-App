@@ -19,8 +19,6 @@ const CityPage = ({data, pageContext}) => {
     weather.temperature[key] = Math.round(value)
   })
 
-
-
   useEffect(() => {
     fetch(`https://api.unsplash.com/search/photos?query=${data.allWeather.getCityByName.name}%20,{data.allWeather.getCityByName.country}&per_page=1&orientation=landscape&client_id=iq1VPE3HOzECR8q0bLHvo6DKxEgWzCYQgBYax653pKU`).then(
       data => {
@@ -36,7 +34,7 @@ const CityPage = ({data, pageContext}) => {
 
   return (
   <Box sx={{
-    background: `url(${imageData?.urls?.full}) center center / cover`,
+    background: `url(${imageData?.urls?.full}&width=1400) center center / cover`,
     minHeight: `100vh`
   }}>
     <Box sx={{
