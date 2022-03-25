@@ -41,8 +41,8 @@ module.exports = {
     {
       resolve: `gatsby-source-graphql`,
       options: {
-        typeName: "Weather",
-        fieldName: "allWeather",
+        typeName: `Weather`,
+        fieldName: `allWeather`,
         url: `https://graphql-weather-api.herokuapp.com`,
       },
     },
