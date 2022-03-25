@@ -19,9 +19,7 @@ plugins:[
 ```
 
 We want to make this app a PWA so lets enable the plugins by uncommenting line 36: 
-```
-`gatsby-plugin-offline`,
-```. 
+`` `gatsby-plugin-offline`,``. 
 ### Theme UI
 
 Next we'll add Theme UI by adding the following:
