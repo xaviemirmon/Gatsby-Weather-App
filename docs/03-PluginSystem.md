@@ -19,7 +19,8 @@ plugins:[
 ```
 
 We want to make this app a PWA so lets enable the plugins by uncommenting line 36: 
-`` `gatsby-plugin-offline`,``. 
+``` `gatsby-plugin-offline`,```. 
+
 ### Theme UI
 
 Next we'll add Theme UI by adding the following:
@@ -27,7 +28,9 @@ Next we'll add Theme UI by adding the following:
 `gatsby-plugin-theme-ui`,
 ```
 
-## Next steps
+## Configuring other bits
+
+### Site metadata
 
 We still need to stay in this file for the next step to  setup our sourcing of data.  But, before we do that, let's tidy up the global metadata of our site. To do that, we need to find and update the siteMetadata object and update the fields accordingly.  
 
@@ -80,6 +83,10 @@ To do this add the following to the end of your gatsby-config.js after the `plug
   jsxImportSource: "theme-ui",
 
 ```
+
+### Remove `gatsby-browser.js` and `gatsby-ssr.js`
+
+We aren't going to leverage any [Gatsby Browser](https://www.gatsbyjs.com/docs/browser-apis/) or [Gatsby SSR](https://www.gatsbyjs.com/docs/ssr-apis/) APIs for this project so we can safely remove `gatsby-browser.js` and `gatsby-ssr.js`.
 
 ## Next steps
 
