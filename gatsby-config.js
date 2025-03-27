@@ -43,7 +43,7 @@ module.exports = {
       options: {
         typeName: `Weather`,
         fieldName: `allWeather`,
-        url: `https://graphql-weather-api.herokuapp.com`,
+        url: `https://graphql-weather-api-g140.onrender.com/`,
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
